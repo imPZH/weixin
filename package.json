@@ -1,0 +1,19 @@
+{
+  "name": "weixin",
+  "version": "1.0.0",
+  "description": "通过微信jssdk实现网页录音的问卷调查平台",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imPZH/weixin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imPZH/weixin/issues"
+  },
+  "homepage": "https://github.com/imPZH/weixin#readme"
+}
