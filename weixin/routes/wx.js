@@ -7,21 +7,20 @@ const TOKEN = 'impzh';
 
 /* GET wx page. */
 router.get('/', function(req, res, next) {
-	res.send("hello, weixin!");
-	// var query = req.query, 
- //      signature = query.signature, 
- //      timestamp = query.timestamp,
- //      nonce = query.nonce,
- //      echostr = query.echostr;
-	// if ( !signature || !timestamp || !echostr || !nonce ) {
-	// 	res.render('index', { title: 'weixin' });
-	// 	return;
-	// }
-	// if ( checkSignature( signature, timestamp, nonce) ) {
-	// 	res.send( echostr );
-	// } else {
-	// 	return;
-	// }
+	var query = req.query, 
+      signature = query.signature, 
+      timestamp = query.timestamp,
+      nonce = query.nonce,
+      echostr = query.echostr;
+	if ( !signature || !timestamp || !echostr || !nonce ) {
+		res.render('index', { title: 'weixin' });
+		return;
+	}
+	if ( checkSignature( signature, timestamp, nonce) ) {
+		res.send( echostr );
+	} else {
+		return;
+	}
 });
 
 /**
