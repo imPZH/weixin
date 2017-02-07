@@ -1,14 +1,21 @@
-var express = require('express');
-var router = express.Router();
-const crypto = require('crypto');
-const hash = crypto.createHash( 'sha1' );
+'use Strict'
 
-const TOKEN = 'impzh';
+const express      = require('express');
+const https        = require('https');
+const crypto       = require('crypto');
+const mongoose     = require('mongoose');
+const config       = require('../config');
+const Wx           = require('../wx/jdk');
 
-/* GET wx page. */
+const wx           = new Wx( config.appId, config.appSecret );
+const router       = express.Router();
+// const db           = mongoose.connect('mongodb://112.74.175.77/weixin');
+// const Schema       = mongoose.Schema;
+
+
 router.get('/', function(req, res, next) {
-	var query = req.query, 
-      signature = query.signature, 
+	var query = req.query,
+      signature = query.signature,
       timestamp = query.timestamp,
       nonce = query.nonce,
       echostr = query.echostr;
@@ -16,29 +23,21 @@ router.get('/', function(req, res, next) {
 		res.render('index', { title: 'weixin' });
 		return;
 	}
-	if ( checkSignature( signature, timestamp, nonce) ) {
+	if ( signature === getSignature( timestamp, nonce) ) {
 		res.send( echostr );
 	} else {
 		return;
 	}
 });
 
-/**
-*   微信服务器接入验证。
-**/
-function checkSignature ( signature, timestamp, nonce ) {
-    var tempArray = [];
-    tempArray.push(timestamp);
-    tempArray.push(nonce);
-    tempArray.push(TOKEN);
-    tempArray.sort();
-    var list = tempArray.join('');
-    hash.update( list );
-    var hashcode = hash.digest('hex');
-    if (hashcode == signature){
-        return true;
-    } else {
-        return false;
-    }
-}
+router.post('/setConfig', function(req, res, next) {
+	let body = JSON.parse( req.body );
+	let url  = body.url ? body.url : req.protocol + '://' + req.hostname + req.originalUrl;
+	wx.getSignPackage( url, ( signPackage ) => {
+		res.send( signPackage );
+	});
+});
+
+
+
 module.exports = router;

@@ -1,14 +1,12 @@
-var access_token;
+
 function setwx(msg){
 	$.ajax({
-		url:'http://makerh5.com/web/api/wx/sample.php',
+		url:'http://localhost.com:3000/wx/setconfig',
 		data:{url:window.location.href.split('#')[0]},
 		type:'post',
 		dataType:'json',
 		success:function(data){
 			var json=eval(data);
-			console.log(json["url"]);
-			// access_token=json[''];
 			setConfig({
 				debug:msg['debug'],
 				title:msg['title'],
@@ -48,12 +46,12 @@ function setwx(msg){
 		          imgUrl:data['imgurl'], // 分享图标
 		          type: '', // 分享类型,music、video或link，不填默认为link
 		          dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-		          success: function () { 
+		          success: function () {
 		              // 用户确认分享后执行的回调函数
 		              //alert('a');
-		              
+
 		          },
-		          cancel: function () { 
+		          cancel: function () {
 		              // 用户取消分享后执行的回调函数
 		          }
 		      });
@@ -63,11 +61,11 @@ function setwx(msg){
 		          desc:data['desc'], // 分享描述
 		          link:data['link'], // 分享链接
 		          imgUrl:data['imgurl'], // 分享图标
-		          success: function () { 
+		          success: function () {
 		              // 用户确认分享后执行的回调函数
 		              alert(data['desc']);
 		          },
-		          cancel: function () { 
+		          cancel: function () {
 		              // 用户取消分享后执行的回调函数
 		          }
 		      });
@@ -77,10 +75,10 @@ function setwx(msg){
 		          desc: data['desc'], // 分享描述
 		          link: data['link'], // 分享链接
 		          imgUrl: data['imgurl'], // 分享图标
-		          success: function () { 
+		          success: function () {
 		             // 用户确认分享后执行的回调函数
 		          },
-		          cancel: function () { 
+		          cancel: function () {
 		             // 用户取消分享后执行的回调函数
 		          }
 		      });
@@ -90,10 +88,10 @@ function setwx(msg){
 		          desc: data['desc'], // 分享描述
 		          link: data['link'], // 分享链接
 		          imgUrl: data['imgurl'], // 分享图标
-		          success: function () { 
+		          success: function () {
 		             // 用户确认分享后执行的回调函数
 		          },
-		          cancel: function () { 
+		          cancel: function () {
 		              // 用户取消分享后执行的回调函数
 		          }
 		      });
