@@ -1,7 +1,8 @@
 
 function setwx(msg){
+	console.log(window.location.href.split('#')[0])
 	$.ajax({
-		url:'http://localhost.com:3000/wx/setconfig',
+		url:'http://impzh.cn/wx/setconfig',
 		data:{url:window.location.href.split('#')[0]},
 		type:'post',
 		dataType:'json',

@@ -31,10 +31,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/setConfig', function(req, res, next) {
-	let body = JSON.parse( req.body );
+
+	let body = req.body;
+
 	let url  = body.url ? body.url : req.protocol + '://' + req.hostname + req.originalUrl;
+
 	wx.getSignPackage( url, ( signPackage ) => {
-		res.send( signPackage );
+		res.send( JSON.stringify( signPackage ) );
 	});
 });
 
