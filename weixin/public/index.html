@@ -35,6 +35,8 @@
 
 	<script src="./js/swiper.min.js"></script>
 
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
 
 
 	<link rel="stylesheet" href="./css/mui.min.css">
@@ -127,41 +129,13 @@
 			<div id="swiper_container" class="swiper-container swiper-containermain">
 
 				<div class="swiper-wrapper">
-
-					<section class="swiper-slide" style="">
-
-						<div class="mui-panel qustion-card">
-							<div class="content">你今年贵庚？</div>
-							<div class="record-area"></div>
-						</div>
-
-					</section>
-
-					<section class="swiper-slide">
-
-						<div class="mui-panel qustion-card">
-							<div class="content"></div>
-							<div class="record-area"></div>
-						</div>
-
-					</section>
-
-
-					<section class="swiper-slide">
-
-						<div class="mui-panel qustion-card">
-							<div class="content"></div>
-							<div class="record-area"></div>
-						</div>
-
-					</section>
-
+					<page v-for="question in questions" v-bind:question='question'></page>
 				</div>
 
 
 
 			</div>
-
+			
 		</div>
 
 	</div>
@@ -169,10 +143,45 @@
 	<script src="./js/main.js"></script>
 	<script type="text/javascript">
 
+		var questionCard = {
+			props    : ['question'], 
+			template : 
+			'<div class="mui-panel qustion-card">'+
+				'<div class="content">{{question}}</div>'+
+				'<div class="record-area"></div>'+
+			'</div>'
+		};
+		var page = {
+			props    : ['question'],
+			template : 
+			'<section class="swiper-slide">'+
+				'<question-card v-bind:question="question"></question-card>'+
+			'</section>'
+				
+		}
+
+		var app = new Vue({
+			el : '#swiper_container',
+			data : {
+				questions : [
+					'第一个问题',
+					'第二个问题',
+					'第三个问题'
+				]
+			},
+			components : {
+				'question-card' : questionCard,
+				'page'  		: page 
+			}
+				
+		})
+
 		var swiper = new Swiper('.swiper-container', {
     	    pagination: '.swiper-pagination',
     	    paginationClickable: true
     	});
+
+
 
 	</script>
 
