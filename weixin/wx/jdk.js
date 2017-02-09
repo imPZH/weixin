@@ -74,7 +74,7 @@ class Wx {
 
     getAccessToken ( callback ) {
        let accessToken = '';
-       fs.readFile( './wx/access_token.json', (err, data) => {
+       fs.readFile( './database/access_token.json', (err, data) => {
            if ( err ) throw err;
 
            data = JSON.parse( data );
@@ -95,7 +95,7 @@ class Wx {
 
                            data.expire_time  = Date.now() +　7000000;
                            data.access_token = parsedData.access_token;
-                           fs.writeFile( './wx/access_token.json', JSON.stringify(data));
+                           fs.writeFile( './database/access_token.json', JSON.stringify(data));
                            accessToken = parsedData.access_token;
                            callback( accessToken );
                        } catch (e) {
@@ -110,7 +110,7 @@ class Wx {
 
     getJsApiTicket ( callback ) {
        let ticket = '';
-       fs.readFile( './wx/jsapi_ticket.json', (err, data) => {
+       fs.readFile( './database/jsapi_ticket.json', (err, data) => {
            if ( err ) throw err;
 
            data = JSON.parse( data );
@@ -132,7 +132,7 @@ class Wx {
                                let data = {};
                                data.expire_time  = Date.now() +　7000000;
                                data.jsapi_ticket = parsedData.ticket;
-                               fs.writeFile( './wx/jsapi_ticket.json', JSON.stringify(data));
+                               fs.writeFile( './database/jsapi_ticket.json', JSON.stringify(data));
                                let ticket = parsedData.ticket;
                                callback( ticket );
                            } catch (e) {

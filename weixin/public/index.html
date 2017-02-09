@@ -46,12 +46,12 @@
 	 <script>console.log("$",typeof $)</script>
 	 <script src="./js/wxconfig.js"></script>
 	 <script>
-	 	setwx({
-	 		debug:true,
-	 		title:"跑赢大咖，北马名额酷跑装备等你来拿！",
-	 		desc:"跑赢我？好大口气！",
-	 		imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/hxjj/7-14/06.jpg",
-	 	});
+	 	// setwx({
+	 	// 	debug:true,
+	 	// 	title:"跑赢大咖，北马名额酷跑装备等你来拿！",
+	 	// 	desc:"跑赢我？好大口气！",
+	 	// 	imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/hxjj/7-14/06.jpg",
+	 	// });
 	 </script>
 	<!-- 微信头设置 END -->
 
@@ -124,65 +124,16 @@
 
 	<div id="page_maincontent" style="width:100%;height:100%;overflow:hidden">
 
-		<div id="pages">
-
 			<div id="swiper_container" class="swiper-container swiper-containermain">
 
 				<div class="swiper-wrapper">
 					<page v-for="question in questions" v-bind:question='question'></page>
 				</div>
 
-
-
 			</div>
-			
-		</div>
 
 	</div>
 
 	<script src="./js/main.js"></script>
-	<script type="text/javascript">
-
-		var questionCard = {
-			props    : ['question'], 
-			template : 
-			'<div class="mui-panel qustion-card">'+
-				'<div class="content">{{question}}</div>'+
-				'<div class="record-area"></div>'+
-			'</div>'
-		};
-		var page = {
-			props    : ['question'],
-			template : 
-			'<section class="swiper-slide">'+
-				'<question-card v-bind:question="question"></question-card>'+
-			'</section>'
-				
-		}
-
-		var app = new Vue({
-			el : '#swiper_container',
-			data : {
-				questions : [
-					'第一个问题',
-					'第二个问题',
-					'第三个问题'
-				]
-			},
-			components : {
-				'question-card' : questionCard,
-				'page'  		: page 
-			}
-				
-		})
-
-		var swiper = new Swiper('.swiper-container', {
-    	    pagination: '.swiper-pagination',
-    	    paginationClickable: true
-    	});
-
-
-
-	</script>
 
 </body>

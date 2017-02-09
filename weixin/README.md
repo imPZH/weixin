@@ -12,14 +12,10 @@
 
 --------------------------------
 
-我的sublime的配置：
-{
-	"color_scheme": "Packages/Tron Color Scheme/TronLegacy.tmTheme",
-	"font_size": 15,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"tab_size": 2,
-	"theme": "ayu-dark.sublime-theme"
-}
+收集到的资料
+
+http://www.cnblogs.com/Leo_wl/p/4361289.html  实现注册登陆功能
+
+https://github.com/AllThingsSmitty/nodejs-chat 实时聊天系统
+
+http://router.vuejs.org/zh-cn/installation.html vue-router
