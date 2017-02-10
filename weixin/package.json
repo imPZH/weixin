@@ -15,5 +15,8 @@
     "morgan": "~1.7.0",
     "muicss": "^0.9.7",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0"
   }
 }
