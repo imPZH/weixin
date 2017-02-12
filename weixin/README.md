@@ -19,3 +19,7 @@ http://www.cnblogs.com/Leo_wl/p/4361289.html  实现注册登陆功能
 https://github.com/AllThingsSmitty/nodejs-chat 实时聊天系统
 
 http://router.vuejs.org/zh-cn/installation.html vue-router
+
+https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_grid.scss
+
+https://www.licm.org/support-us/membership/
