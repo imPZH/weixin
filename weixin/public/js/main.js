@@ -50,12 +50,11 @@ var app = new Vue({
 			'第二个问题',
 			'第三个问题'
 		]
-	}
-	,
+	},
 	components: {
 		'page': page
 	}
-};
+});
 
 // var swiper = new Swiper('.swiper-container', {
 // 	pagination: '.swiper-pagination',
