@@ -3,7 +3,26 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Express' });
+	 var options = {
+		root: './',
+		dotfiles: 'deny',
+		headers: {
+			'x-timestamp': Date.now(),
+			'x-sent': true
+		}
+	};
+
+	var fileName = 'index.html';
+	res.sendFile(fileName, options, function (err) {
+		if (err) {
+			console.log(err);
+			res.status(err.status).end();
+		}
+		else {
+			console.log('Sent:', fileName);
+		}
+	});
+
 });
 
 module.exports = router;

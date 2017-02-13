@@ -21,3 +21,7 @@ https://github.com/AllThingsSmitty/nodejs-chat 实时聊天系统
 http://router.vuejs.org/zh-cn/installation.html vue-router
 
 http://www.17sucai.com/preview/206286/2017-01-19/login/index.html
+
+https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_grid.scss
+
+https://www.licm.org/support-us/membership/

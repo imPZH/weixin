@@ -25,80 +25,66 @@
 	<!-- Make IE recognise HTML5 elements for styling -->
 
 
-	<link rel="stylesheet" href="./css/swiper.min.css">
+	<link rel="stylesheet" href="./lib/css/swiper.min.css">
 
 	<link rel="stylesheet" href="./css/style.css">
 
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
-	<script src="./js/swiper.jquery.min.js"></script>
+	<script src="./lib/js/swiper.jquery.min.js"></script>
 
-	<script src="./js/swiper.min.js"></script>
+	<script src="./lib/js/swiper.min.js"></script>
 
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
 
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
-
-	<!--<link rel="stylesheet" href="./css/mui.min.css">-->
-
-	<!-- 微信头设置 START -->
-	 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-	 <script src="./js/wxconfig.js"></script>
-	 <script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	 
+	 <!--<script src="./js/wxconfig.js"></script>-->
+	 <!--<script>
 	 	// setwx({
 	 	// 	debug:true,
 	 	// 	title:"跑赢大咖，北马名额酷跑装备等你来拿！",
 	 	// 	desc:"跑赢我？好大口气！",
 	 	// 	imgurl:"http://myteamproject.oss-cn-beijing.aliyuncs.com/hxjj/7-14/06.jpg",
 	 	// });
-	 </script>
-	<!-- 微信头设置 END -->
+	 </script>-->
 
 
 </head>
 
 
 
-<body style="padding:0;margin:0;">
+
+<body>
 
 	<!--<div id="page_maincontent" style="width:100%;height:100%;overflow:hidden">
 
 			<div id="swiper_container" class="swiper-container swiper-containermain">
-					
-				
 
 				<div class="swiper-wrapper">
-
-					<login v-bind:message='message'></login>
-
-					<section class="swiper-slide">
-						<div class="login-form">
-							<form>
-								<div class="user-name common-div">
-									<span class="eamil-icon common-icon">
-										<img src="images/eamil.png">
-									</span>
-									<input type="email" name="username" value="" placeholder="E-mail address">        
-								</div>
-
-								<div class="user-pasw common-div">
-									<span class="pasw-icon common-icon">
-										<img src="images/password.png">
-									</span>
-									<input type="password" name="password" value="" placeholder="******">        
-								</div>
-							</form>
-								
-						</div>
-					</section>
-
 					<page v-for="question in questions" v-bind:question='question'></page>
-
 				</div>
 
 			</div>
-
 	</div>-->
+	<div class="site-bg"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-push-1 col-5">
+				<a class="button">get start!</a>
+			</div>
+			<div class="col-push-1 col-5">
+				<a class="button">get start!</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-offset-1 col-10">
+				<a class="bg-offset" style="width:100%">get start!</a>
+			</div>
+		</div>
+	</div>
 	
 
 	<script src="./js/main.js"></script>
