@@ -1,6 +1,41 @@
 a {
   text-decoration: none; }
 
+body, button, input, select, textarea, .main-nav li ul li, .site-header .search-bar input[type="text"] {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.category, .staffer p {
+  font-family: "soleil", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+b, strong, h5, button, input[type="submit"], .button, .event-result .event-image, .ages, .home-events h1 a, footer nav, .submenu .selected > a, .fieldtrip .age, .hours-plugin .today {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.member-link, h3, .exhibit .label, .main-nav li, .alert-bar .inner {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h4, h6 {
+  font-family: "fatfrank", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -192,7 +227,7 @@ body {
   margin: 0;
   padding: 0; }
 
-.bg-offset, .button, button {
+.bg-offset, .login, .button, button, .qustion-card {
   display: inline-block;
   border: 3px solid black;
   border-radius: 3px;
@@ -200,6 +235,34 @@ body {
   background-repeat: no-repeat;
   background-image: linear-gradient(#ef3325, #ef3325);
   box-shadow: 6px 6px 0 #ef3325; }
+
+.login {
+  display: block;
+  position: relative;
+  top: 100px;
+  text-align: center;
+  padding: 40px;
+  background-image: linear-gradient(#003c58, #003c58);
+  box-shadow: 6px 6px 0 #003c58; }
+  .login .button {
+    box-sizing: border-box;
+    margin: 0 auto 20px;
+    width: 100%;
+    background-color: #ef3325; }
+  .login input[type="text"] {
+    height: 50px;
+    width: 100%;
+    font-weight: bold;
+    font-size: medium;
+    line-height: 50px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    background: #fff;
+    border: 3px solid black;
+    padding: 0 15px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
 
 .button, button {
   color: #ffffff;
@@ -270,14 +333,17 @@ body {
   align-items: center; }
 
 .qustion-card {
+  background-image: linear-gradient(#f8c823, #f8c823);
+  box-shadow: 6px 6px 0 #f8c823;
   padding: 0;
   width: 80%;
   height: 70%; }
   .qustion-card .content {
-    color: #999;
+    color: white;
+    font-weight: bold;
     height: 80%;
     width: 100%; }
   .qustion-card .record-area {
     height: 20%;
     width: 100%;
-    background: #99CC66; }
+    background: white; }

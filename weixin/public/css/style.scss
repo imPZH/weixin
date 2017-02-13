@@ -16,6 +16,7 @@ body {
     padding: 0;
 }
 
+
 .bg-offset{
     display: inline-block;
     border: 3px solid black;
@@ -24,6 +25,39 @@ body {
     background-repeat: no-repeat;
     background-image: linear-gradient(#ef3325,#ef3325);
     box-shadow: 6px 6px 0 #ef3325;
+}
+
+.login {
+    @extend .bg-offset;
+    display: block;
+    position: relative;
+    top: 100px;
+    text-align: center;
+    padding: 40px;
+    background-image: linear-gradient(#003c58,#003c58);
+    box-shadow: 6px 6px 0 #003c58;
+
+    .button {
+        box-sizing: border-box;
+        margin: 0 auto 20px;
+        width: 100%;
+        background-color: #ef3325;
+    }
+    input[type="text"] {
+        height: 50px;
+        width: 100%;
+        font-weight: bold;
+        font-size: medium;
+        line-height: 50px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        background: #fff;
+        border: 3px solid black;
+        padding: 0 15px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
 }
 
 .button, button {
@@ -105,17 +139,57 @@ body {
 }
 
 .qustion-card {
+    @extend .bg-offset;
+    background-image: linear-gradient($primary-yellow,$primary-yellow);
+    box-shadow: 6px 6px 0 $primary-yellow;
+
     padding: 0;
     width: 80%;
     height: 70%;
     .content {
-        color: #999;
+        color: white;
+        font-weight: bold;
         height: 80%;
         width: 100%;
     }
     .record-area {
         height: 20%;
         width: 100%;
-        background: #99CC66;
+        background: white;
     }
 }
+
+
+// body {
+//     &[data-mobile-nav="closed"] {
+//         .mobile-nav-btn {
+//             .closer {
+//                 display: none
+//             }
+//             .opener {
+//                 display: inline-block
+//             }
+//         }
+//     }
+//     &[data-mobile-nav="open"] {
+//         .mobile-nav-wrapper {
+//             display: block;
+//         }
+//         .mobile-nav-btn {
+//             position: relative;
+//             z-index: 102;
+//             background: black;
+//             -webkit-box-shadow: 6px 6px 0 transparent;
+//             -moz-box-shadow: 6px 6px 0 transparent;
+//             box-shadow: 6px 6px 0 transparent;
+
+//             .closer {
+//                 display: inline-block;
+//             }
+//             .opener {
+//                 display: none;
+//             }
+//         }
+//     }
+    
+// }

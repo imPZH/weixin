@@ -1,3 +1,43 @@
 a {
     text-decoration: none;
 }
+
+body, button, input, select, textarea, .main-nav li ul li, .site-header .search-bar input[type="text"] {
+    font-family: "soleil", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.category, .staffer p {
+    font-family: "soleil", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+b, strong, h5, button, input[type="submit"], .button, .event-result .event-image, .ages, .home-events h1 a, footer nav, .submenu .selected>a, .fieldtrip .age, .hours-plugin .today {
+    font-family: "soleil", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.member-link, h3, .exhibit .label, .main-nav li, .alert-bar .inner {
+    font-family: "soleil", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+h1, h2, h4, h6 {
+    font-family: "fatfrank", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
